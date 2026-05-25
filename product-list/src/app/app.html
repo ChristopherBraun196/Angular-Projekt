@@ -1,3 +1,41 @@
 <app-header></app-header>
-<app-product-list></app-product-list>
+<!-- <app-product-detail></app-product-detail> -->
+ <app-product-list></app-product-list>
+
 <router-outlet />
+
+<!-- <h1>{{our_text}}</h1> -->
+
+<!-- <button [style.color]= "getBtnColor()" [disabled]="isDisabled" (click)="textGen()">Klick mich!</button> -->
+
+<!-- @if (lang == "de") {
+  <p>hallo welt</p>
+}@else if (lang == "en") {
+  <p>hello world</p>
+}@else{
+    <p>language not found</p>
+} -->
+
+<!-- <ul>
+  @switch (errormsg) {
+    @case ('wrong number') {
+      <p>hey das war die falsche Nummer</p>
+    }
+    @case ('wrong text') {
+      <p>hey das war der falsche text</p>
+    }
+
+    @case ("") {
+        <p>hey alles hat geklappt</p>
+    }
+      @default {
+        <p>hey wir wissen nicht was schief lief</p>
+    }
+  }
+
+  @for (item of list; track item; let banana = $index, count = $count) {
+    <li>#{{ banana }} : {{ item }}</li>
+  } @empty {
+    <li>There are no items.</li>
+  }
+</ul> -->

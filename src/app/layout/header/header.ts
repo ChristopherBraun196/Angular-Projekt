@@ -14,7 +14,7 @@ export class Header {
 
 
   ngOnInit(){
-    this.path = "detail";
+    this.path = "";
 
     if(this.path == "detail"){
       this.btn_text = "zurück zur Liste";

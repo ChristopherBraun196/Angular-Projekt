@@ -1,15 +1,8 @@
 import { Routes } from '@angular/router';
-import {CompA} from  './comp-a/comp-a';
-import {CompB} from  './comp-b/comp-b';
+import { ProductDetail } from './shared/components/product-detail/product-detail';
+import { ProductList } from './shared/components/product-list/product-list';
 
 export const routes: Routes = [
-
-    {
-        path:"",
-        component: CompA
-    },
-    {
-        path:"compb",
-        component: CompB
-    }
+    {path:"", component:ProductList},
+    {path:"detail", component:ProductDetail}
 ];

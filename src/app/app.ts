@@ -1,7 +1,10 @@
-import { Component, Pipe, signal, PipeTransform } from '@angular/core';
+import { Component, Pipe, signal, PipeTransform, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './layout/header/header';
 import { CurrencyPipe, JsonPipe } from '@angular/common';
+import { CounterService } from './counter_service';
+import { CompA } from './comp-a/comp-a';
+import { CompB } from './comp-b/comp-b';
 
 // import { ProductList } from './shared/components/product-list/product-list';
 // import { ProductDetail } from './shared/components/product-detail/product-detail';
@@ -10,18 +13,19 @@ import { CurrencyPipe, JsonPipe } from '@angular/common';
   name: 'truncate',
 })
 export class TruncatePipe implements PipeTransform {
-  transform(value: string, limit:number = 10): string {
+  transform(value: string, limit: number = 10): string {
     return value.length < 10 ? value : value.substring(0, 10) + '...';
   }
 }
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, CurrencyPipe, JsonPipe, TruncatePipe],
+  imports: [RouterOutlet, Header, CurrencyPipe, JsonPipe, TruncatePipe, CompA, CompB],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
+  counterService = inject(CounterService);
   lang = 'de';
 
   errormsg = '';
@@ -31,7 +35,7 @@ export class App {
   myVar = 'hello_world';
   price = 501.95;
   data = { hallo: 'welt' };
-  textVar = "das ist ein kurzer Text"
+  textVar = 'das ist ein kurzer Text';
 }
 
 // export class App {

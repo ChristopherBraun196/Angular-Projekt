@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-
+import { CurrencyPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
-  imports: [RouterLink],
+  imports: [RouterLink, CurrencyPipe],
   templateUrl: './product-list.html',
   styleUrl: './product-list.scss',
 })
